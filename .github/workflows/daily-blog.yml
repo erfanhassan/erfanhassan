@@ -1,0 +1,86 @@
+name: Daily AI Blog Publisher
+
+on:
+  schedule:
+    # 03:00 UTC = 09:00 AM Bangladesh Time (BST) - Morning Track: Business AI Automation
+    - cron: '0 3 * * *'
+    # 12:00 UTC = 06:00 PM Bangladesh Time (BST) - Evening Track: AI Ecosystem, Tools & News
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      track:
+        description: 'Select Blog Track to Generate'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - 'both'
+          - 'automation'
+          - 'ecosystem'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Determine & Execute Generation
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          HOUR=$(date -u +%H)
+          TRIGGER_TYPE="${{ github.event_name }}"
+          CHOSEN_TRACK="${{ github.event.inputs.track }}"
+
+          echo "Event: $TRIGGER_TYPE | Hour (UTC): $HOUR | Input: $CHOSEN_TRACK"
+
+          if [ "$TRIGGER_TYPE" = "workflow_dispatch" ]; then
+            if [ "$CHOSEN_TRACK" = "both" ]; then
+              echo "Generating both tracks..."
+              node scripts/generate-daily-blog.mjs --track=automation
+              node scripts/generate-daily-blog.mjs --track=ecosystem
+            else
+              echo "Generating track: $CHOSEN_TRACK..."
+              node scripts/generate-daily-blog.mjs --track=$CHOSEN_TRACK
+            fi
+          else
+            # Scheduled Cron execution:
+            # 03:00 UTC (09:00 AM BST) -> Business Automation Track
+            # 12:00 UTC (06:00 PM BST) -> AI Ecosystem & Tools Track
+            if [ "$HOUR" -lt 8 ]; then
+              echo "🌅 Running Morning Track (09:00 AM BST): Business AI Automation..."
+              node scripts/generate-daily-blog.mjs --track=automation
+            else
+              echo "🌆 Running Evening Track (06:00 PM BST): AI Ecosystem, Tools & News..."
+              node scripts/generate-daily-blog.mjs --track=ecosystem
+            fi
+          fi
+
+      - name: Commit and Push New Blog Posts
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/blogs/
+
+          if git diff --staged --quiet; then
+            echo "No new blog posts generated."
+          else
+            git commit -m "🤖 chore(blog): publish daily automated AI blog posts [skip ci]"
+            git push origin HEAD:${{ github.ref }}
+            echo "✅ Successfully published new blog posts to repository!"
+          fi
