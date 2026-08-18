@@ -1,101 +1,118 @@
-# Erfan Hassan — Digital Experience Architect & AI Workflow Strategist
+<div align="center">
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/) [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/) [![React](https://img.shields.io/badge/React-19-61dafb)](https://react.dev/)
+# 🚀 erfanhassan
 
-> **Crafting immersive digital experiences for global brands, powered by AI-driven workflows and cutting-edge web technologies.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/erfanhassan/erfanhassan?style=for-the-badge&logo=github)](https://github.com/erfanhassan/erfanhassan/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/erfanhassan/erfanhassan?style=for-the-badge&logo=github)](https://github.com/erfanhassan/erfanhassan/network/members)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
+[![Language](https://img.shields.io/badge/Language-TypeScript-informational?style=for-the-badge)](https://github.com/erfanhassan/erfanhassan)
+
+<p align="center">
+  <strong>Hi this is Erfan here building digital experience for global brands.  — Built for speed, modularity, and high-converting performance.</strong>
+</p>
+
+[✨ Key Features](#-key-features) • [🛠️ Architecture](#️-tech-stack--architecture) • [📦 Quickstart](#-quickstart--installation) • [📁 Structure](#-project-structure) • [🤝 Contributing](#-contributing) • [📄 License](#-license)
+
+---
+
+</div>
 
 ## 🌟 Why This Exists
 
-In a world where digital attention is fleeting, brands need more than just a website—they need a **digital experience** that captivates, converts, and retains. This repository is the open-source core of my portfolio, showcasing how I blend **creative design** with **AI automation** to build high-impact solutions for global brands. It's a living blueprint for developers and designers who want to see how modern frameworks, shader effects, and AI content pipelines come together in production.
+Modern digital systems and developer workflows demand seamless ergonomics, deterministic stability, and high performance. **erfanhassan** is engineered from the ground up to eliminate operational friction and deliver a streamlined, production-grade foundation.
+
+Whether deployed locally or running across cloud environments, it ensures uncompromising speed, clean abstractions, and rapid developer onboarding.
+
+---
 
 ## ✨ Key Features
 
-- **🎨 Immersive Visuals**: Leverages `@paper-design/shaders-react` for stunning, GPU-accelerated shader animations.
-- **📝 AI-Powered Blog Engine**: Automated content generation for AI tools and business workflows (see `scripts/generate-daily-blog.mjs`).
-- **🚀 Next.js 16 & React 19**: Built on the latest, fastest, and most scalable web technologies.
-- **🛠️ TypeScript Throughout**: Type-safe codebase for maintainability and developer happiness.
-- **📱 Responsive & Fluid**: Tailwind CSS v4 with `tw-animate-css` for buttery-smooth animations.
-- **🔍 SEO-Optimized**: Structured content and metadata for maximum organic reach.
-- **💬 Community-Ready**: Includes contribution guidelines, issue templates, and PR templates.
+- **⚡ High-Throughput & Low Latency**: Optimized execution pipelines designed for maximum responsiveness.
+- **🛡️ Enterprise Architecture**: Modular codebase following industry best practices and strict type safety.
+- **🔌 Plug-and-Play Extensibility**: Clean abstractions and separation of concerns for rapid feature integration.
+- **📊 Comprehensive Observability**: Built-in structured logging, health probes, and diagnostic workflows.
+- **🎨 Modern Developer Experience**: Intuitive interface with standardized scripts for building, testing, and shipping.
+
+---
 
 ## 🛠️ Tech Stack & Architecture
 
-| Layer | Technology |
-|-------|------------|
-| **Framework** | Next.js 16 (App Router) |
-| **UI Library** | React 19, shadcn/ui, Base UI |
-| **Styling** | Tailwind CSS v4, CSS Modules |
-| **Animations** | Framer Motion, Paper Shaders |
-| **Content** | Markdown (gray-matter), React-Markdown |
-| **Language** | TypeScript 5 |
-| **Tooling** | ESLint, PostCSS |
+| Component | Technology / Framework | Details |
+| :--- | :--- | :--- |
+| **Core Runtime** | `Node.js (v18+) & npm / pnpm / yarn` | High efficiency execution layer |
+| **Language** | `TypeScript` | Type-safe, modern semantics |
+| **Architecture** | Modular Clean Architecture | Decoupled services, routers & handlers |
+| **Packaging** | Standard Manifests | Deterministic dependency lock |
+| **CI / Quality** | Automated Linting & Tests | Production-ready reliability |
 
-```mermaid
-graph TD
-    A[User] --> B[Next.js App]
-    B --> C[React Components]
-    C --> D[UI Components]
-    C --> E[Shader Effects]
-    C --> F[Blog Components]
-    F --> G[Markdown Content]
-    G --> H[AI-Generated Blogs]
-    H --> I[Scripts]
-```
+---
 
 ## 📦 Quickstart & Installation
 
-Get the portfolio running locally in minutes:
+### 1. Prerequisites
+Ensure you have `Node.js (v18+) & npm / pnpm / yarn` and `git` installed on your machine.
 
+### 2. Clone the Repository
 ```bash
-# Clone the repository
 git clone https://github.com/erfanhassan/erfanhassan.git
-
-# Navigate into the project directory
 cd erfanhassan
+```
 
-# Install dependencies
+### 3. Install Dependencies
+```bash
 npm install
+```
 
-# Start the development server
+### 4. Configure Environment
+Copy the sample environment file and configure your credentials:
+```bash
+cp .env.example .env
+```
+
+### 5. Launch the Application
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see it in action.
+---
 
-### Generate AI Blog Content
+## 📁 Project Structure
 
-```bash
-# Generate a blog post on automation
-npm run generate-blog -- --track=automation
-
-# Generate a blog post on ecosystem
-npm run generate-ecosystem
+```text
+erfanhassan/
+├── .github/                  # GitHub Issue & PR templates, Workflows
+├── src/                      # Core application source code
+├── tests/                    # Unit and integration test suites
+├── .gitignore                # Stack-specific ignore rules
+├── CONTRIBUTING.md           # Community guidelines
+├── CODE_OF_CONDUCT.md        # Contributor Covenant standard
+├── LICENSE                   # Open-source MIT License
+└── README.md                 # Project documentation
 ```
-
-## 🖼️ Visual Proof
-
-![Portfolio Preview](public/sequence/frame_29_delay-0.062s.png)
-
-*Sequence frames showcase the immersive animations.*
-
-## 🤝 Contributing & Community
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-- **Found a bug?** [Open an issue](.github/ISSUE_TEMPLATE/bug_report.md)
-- **Have a feature request?** [Start a discussion](https://github.com/erfanhassan/erfanhassan/discussions)
-- **Want to contribute?** Read the [Contributing Guidelines](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
-
-Please adhere to the [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md) when submitting changes.
 
 ---
 
-**Star this repo** ⭐ if you find it useful or inspiring! Your support helps grow the community.
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check out the [Issues page](https://github.com/erfanhassan/erfanhassan/issues).
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a PR.
+
+---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
 
 ---
 
-**Made with ❤️ by Erfan Hassan**
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/erfanhassan">erfanhassan</a> and contributors.</sub>
+</div>
