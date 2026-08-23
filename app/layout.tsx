@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -83,6 +84,7 @@ export default function RootLayout({
     <html lang="en" className={cn("h-full", "antialiased", inter.variable, "font-sans", geist.variable)} suppressHydrationWarning>
       <body className="min-h-full bg-[#0a0a0a] text-[#f0f0f0] overflow-x-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   );
