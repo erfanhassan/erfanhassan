@@ -5,7 +5,7 @@ date: "2026-08-29"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover the exact AI agent architectures, workflow logic, and cost models modern companies use to deliver hyper-personalized campaigns at scale—without inflating headcount or drowning in manual segmentation."
-coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["AI Marketing", "Hyper-Personalization", "Marketing Automation", "AI Agents", "Customer Segmentation", "Campaign Orchestration"]

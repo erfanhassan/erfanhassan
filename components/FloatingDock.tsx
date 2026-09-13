@@ -32,27 +32,54 @@ export default function FloatingDock() {
     {
       icon: Home,
       label: "Home",
-      onClick: () => navigateTo("/"),
+      href: "/",
+      onClick: (e: React.MouseEvent) => {
+        if (pathname === "/") {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      },
     },
     {
       icon: Folder,
       label: "Projects",
-      onClick: () => navigateTo("/#work", "work"),
+      href: "/#work",
+      onClick: (e: React.MouseEvent) => {
+        if (pathname === "/") {
+          e.preventDefault();
+          const el = document.getElementById("work");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+      },
     },
     {
       icon: BookOpen,
       label: "Blog",
-      onClick: () => navigateTo("/blog"),
+      href: "/blog",
     },
     {
       icon: User,
       label: "About",
-      onClick: () => navigateTo("/#about", "about"),
+      href: "/#about",
+      onClick: (e: React.MouseEvent) => {
+        if (pathname === "/") {
+          e.preventDefault();
+          const el = document.getElementById("about");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+      },
     },
     {
       icon: Mail,
       label: "Contact",
-      onClick: () => navigateTo("/#contact", "contact"),
+      href: "/#contact",
+      onClick: (e: React.MouseEvent) => {
+        if (pathname === "/") {
+          e.preventDefault();
+          const el = document.getElementById("contact");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+      },
     },
   ];
 

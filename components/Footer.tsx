@@ -4,6 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 
+import Link from "next/link";
+
 export default function Footer() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -47,7 +49,7 @@ export default function Footer() {
             flexDirection: "column",
             alignItems: "center",
             width: "100%",
-            marginBottom: "120px"
+            marginBottom: "80px"
           }}
         >
           
@@ -92,6 +94,41 @@ export default function Footer() {
           </motion.a>
         </motion.div>
 
+        {/* Navigation & Crawl Links for SEO & AEO */}
+        <nav aria-label="Footer Navigation" className="w-full flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-10 text-sm font-mono tracking-wider">
+          <Link href="/" className="text-[#888] hover:text-[#e8ff47] transition-colors">
+            Home
+          </Link>
+          <Link href="/blog" className="text-[#888] hover:text-[#e8ff47] transition-colors">
+            AI Insights &amp; Blog
+          </Link>
+          <Link href="/#work" className="text-[#888] hover:text-[#e8ff47] transition-colors">
+            Projects
+          </Link>
+          <Link href="/#about" className="text-[#888] hover:text-[#e8ff47] transition-colors">
+            About Erfan
+          </Link>
+          <Link href="/#contact" className="text-[#888] hover:text-[#e8ff47] transition-colors">
+            Contact
+          </Link>
+          <a
+            href="https://github.com/erfanhassan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#666] hover:text-white transition-colors"
+          >
+            GitHub ↗
+          </a>
+          <a
+            href="https://linkedin.com/in/erfanhassan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#666] hover:text-white transition-colors"
+          >
+            LinkedIn ↗
+          </a>
+        </nav>
+
         {/* Divider */}
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent mb-12" />
 
@@ -105,7 +142,7 @@ export default function Footer() {
           {/* Logo + copyright */}
           <div className="flex items-center gap-3">
             <span className="text-[#555] text-sm">
-              © {new Date().getFullYear()} Erfan. All rights reserved.
+              © {new Date().getFullYear()} Erfan Hassan. All rights reserved.
             </span>
           </div>
         </motion.div>

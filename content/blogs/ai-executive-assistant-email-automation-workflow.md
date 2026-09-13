@@ -5,7 +5,7 @@ date: "2026-09-03"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how AI executive assistants reduce email triage time by 78%, automate drafting with context-aware logic, and escalate urgent tasks using priority scoring. A technical breakdown with architecture diagrams and ROI calculations."
-coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Email Automation", "Executive Assistant AI", "Email Workflow Automation", "AI Agents", "Email Overload", "Automation ROI"]

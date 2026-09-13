@@ -5,7 +5,7 @@ date: "2026-09-02"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how to replace fragmented, manual SaaS onboarding with a coordinated multi-agent AI system that cuts time-to-value by 65%, reduces churn by 30%, and scales without adding headcount."
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["Multi-Agent AI", "SaaS Onboarding", "AI Workflows", "Customer Success Automation", "Erfan Hassan AI agency"]

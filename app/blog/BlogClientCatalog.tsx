@@ -52,16 +52,7 @@ export default function BlogClientCatalog({ initialPosts }: BlogClientCatalogPro
   return (
     <div className="w-full flex flex-col items-center">
       {/* ── 1. Page Header (Airy & Centered) ───────────────────────────── */}
-      <div className="text-center max-w-3xl mx-auto flex flex-col items-center space-y-6 mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-semibold text-[#e8ff47]"
-        >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Daily AI Engineering &amp; Automation</span>
-        </motion.div>
-
+      <div className="text-center max-w-3xl mx-auto flex flex-col items-center space-y-4 mb-12">
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +77,7 @@ export default function BlogClientCatalog({ initialPosts }: BlogClientCatalogPro
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-base sm:text-lg text-[#9da3af] font-light leading-relaxed text-center max-w-xl mx-auto"
         >
-          Actionable blueprints on automating business workflows, slashing operational overhead by 70%, and adopting frontier AI models.
+          Actionable blueprints for automating business workflows.
         </motion.p>
       </div>
 
@@ -163,39 +154,6 @@ export default function BlogClientCatalog({ initialPosts }: BlogClientCatalogPro
           <span>AI Tools &amp; Trends</span>
         </button>
       </div>
-
-      {/* ── 4. Trending Tag Filters (Airy Pill Row) ─────────────────────── */}
-      {allTags.length > 0 && (
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-20 max-w-2xl mx-auto">
-          <span className="text-xs text-[#666] font-medium mr-1">Trending:</span>
-          {allTags.slice(0, 7).map((tag) => {
-            const isSelected = selectedTag === tag;
-            return (
-              <button
-                key={tag}
-                type="button"
-                onClick={() => setSelectedTag(isSelected ? null : tag)}
-                className={`px-3.5 py-1.5 rounded-full text-[11px] font-medium border transition-all cursor-pointer ${
-                  isSelected
-                    ? "bg-[#e8ff47]/20 border-[#e8ff47] text-[#e8ff47]"
-                    : "bg-white/[0.03] border-white/[0.06] text-[#888] hover:text-[#e0e0e0] hover:border-white/[0.15]"
-                }`}
-              >
-                #{tag}
-              </button>
-            );
-          })}
-          {selectedTag && (
-            <button
-              type="button"
-              onClick={() => setSelectedTag(null)}
-              className="text-[11px] text-[#e8ff47] underline underline-offset-4 ml-1 cursor-pointer"
-            >
-              Clear tag
-            </button>
-          )}
-        </div>
-      )}
 
       {/* ── 5. Articles Stream ─────────────────────────────────────────── */}
       {filteredPosts.length === 0 ? (

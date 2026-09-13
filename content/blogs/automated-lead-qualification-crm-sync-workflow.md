@@ -5,7 +5,7 @@ date: "2026-09-08"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how to build a self-driving lead qualification system that scores, routes, and syncs prospects to your CRM in under 60 seconds—cutting response times by 90% and recovering up to 35% of lost revenue."
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1573164713619-24cb711aeb26?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["Lead Qualification", "CRM Automation", "AI Agents", "Sales Workflow", "Lead Scoring", "Revenue Operations"]

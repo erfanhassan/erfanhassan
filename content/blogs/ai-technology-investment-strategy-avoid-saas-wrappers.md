@@ -5,7 +5,7 @@ date: "2026-09-01"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Cut through the AI hype cycle with a proven investment framework. Learn how to identify thin SaaS wrappers, calculate true ROI, and build custom automation that delivers 60–80% cost reductions."
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["AI Investment", "SaaS Wrappers", "AI Automation", "Cost Optimization", "ROI Framework"]

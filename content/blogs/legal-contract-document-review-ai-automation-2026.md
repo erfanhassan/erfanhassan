@@ -5,7 +5,7 @@ date: "2026-08-25"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how custom AI agents reduce legal document review cycles by up to 75%, cut operational costs by 60%, and eliminate human error—with exact workflows, architecture diagrams, and ROI calculations you can implement today."
-coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["Legal AI", "Contract Review Automation", "Document Intelligence", "AI Agents", "Legal Tech", "Workflow Automation"]

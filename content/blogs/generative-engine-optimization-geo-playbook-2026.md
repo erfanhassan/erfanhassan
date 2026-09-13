@@ -5,7 +5,7 @@ date: "2026-08-24"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover the exact architecture, metrics, and cost calculations behind Generative Engine Optimization (GEO). Learn how to position your business as the definitive source cited by ChatGPT, Perplexity, and Gemini—and capture the $1.2T AI-driven discovery channel."
-coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["Generative Engine Optimization", "GEO", "AI Search", "ChatGPT Citations", "Perplexity", "AI Marketing", "LLM Visibility", "Erfan Hassan AI Agency"]

@@ -5,7 +5,7 @@ date: "2026-09-06"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Autonomous multi-agent swarms are redefining enterprise automation. This blueprint dissects LangGraph vs. AutoGen architectures, real-world performance metrics, and a step-by-step cost model for deploying agent collectives that cut operational overhead by up to 80%."
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["Multi-Agent Systems", "LangGraph", "AutoGen", "AI Orchestration"]

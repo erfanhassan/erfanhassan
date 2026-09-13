@@ -5,7 +5,7 @@ date: "2026-09-04"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Zapier and Make handle simple triggers. Custom AI agents handle judgment. This deep-dive reveals the exact cost, architecture, and performance thresholds where bespoke agent infrastructure becomes the only rational choice for scaling businesses."
-coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Agents", "Zapier Alternatives", "Make.com", "Workflow Automation", "Agent Infrastructure", "Enterprise Automation"]

@@ -5,7 +5,7 @@ date: "2026-09-13"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "A hard-numbers benchmark of DeepSeek V3/R1, Claude 3.7, and GPT-4o across cost, latency, reasoning, and tool-calling — with real workflow architectures and monthly cost math for a 100K-task operation."
-coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["DeepSeek V3", "DeepSeek R1", "Claude 3.7", "GPT-4o", "LLM Cost Benchmark", "AI Automation"]

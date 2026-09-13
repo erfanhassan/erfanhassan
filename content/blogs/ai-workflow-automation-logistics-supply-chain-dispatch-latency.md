@@ -5,7 +5,7 @@ date: "2026-09-05"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how AI workflow automation reduces logistics dispatch latency from hours to under 10 seconds, with exact architectures, cost models, and step-by-step implementation logic that cut operational expenses by up to 75%."
-coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Logistics", "Supply Chain Automation", "Dispatch Automation", "Workflow Automation", "AI Agents"]

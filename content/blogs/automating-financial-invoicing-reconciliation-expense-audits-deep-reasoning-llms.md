@@ -5,7 +5,7 @@ date: "2026-09-11"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "A technical deep dive into how deep reasoning LLMs automate invoice processing, bank reconciliation, and expense audits — with exact architectures, cost math, and ROI models for finance teams."
-coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Finance Automation", "Invoice Processing", "Bank Reconciliation", "Expense Audit", "LLM Agents", "Finance Operations"]

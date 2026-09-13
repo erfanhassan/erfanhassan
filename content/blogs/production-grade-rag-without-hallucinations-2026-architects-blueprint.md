@@ -5,7 +5,7 @@ date: "2026-09-08"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "A technical deep-dive into building enterprise RAG systems that achieve sub-1% hallucination rates. Learn the exact retrieval architectures, validation layers, and cost models used by Erfan Hassan's AI Automation Agency to deploy production-ready AI agents."
-coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["RAG", "AI Agents", "Hallucination Prevention", "Enterprise AI", "LLM Architecture", "Vector Databases", "AI Automation"]

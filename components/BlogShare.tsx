@@ -13,9 +13,7 @@ export default function BlogShare({ title, url, className = "" }: BlogShareProps
   const [copied, setCopied] = useState(false);
 
   const getShareUrl = () => {
-    if (url) return url;
-    if (typeof window !== "undefined") return window.location.href;
-    return "https://erfanhassan.sonictch.com/blog";
+    return url || "https://erfanhassan.sonictch.com/blog";
   };
 
   const handleShareClick = (e: React.MouseEvent, shareUrl: string) => {
@@ -46,7 +44,7 @@ export default function BlogShare({ title, url, className = "" }: BlogShareProps
     }
   };
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : (url || "");
+  const currentUrl = url || "https://erfanhassan.sonictch.com/blog";
   const encodedUrl = encodeURIComponent(currentUrl);
   const encodedTitle = encodeURIComponent(title);
 
@@ -61,72 +59,64 @@ export default function BlogShare({ title, url, className = "" }: BlogShareProps
 
       <div className="flex flex-wrap items-center gap-2.5">
         {/* X / Twitter */}
-        <button
-          type="button"
-          onClick={(e) =>
-            handleShareClick(
-              e,
-              `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`
-            )
-          }
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
           title="Share on X (Twitter)"
-          className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] text-[#888] hover:bg-white/[0.08] hover:text-[#f5f5f5] hover:border-white/20 transition-all cursor-pointer"
+          className="w-10 h-10 rounded-full border border-white/[0.08] bg-[#0c0c0c] hover:bg-[#141414] hover:border-white/[0.2] flex items-center justify-center transition-all duration-300 hover:-translate-y-1 group"
         >
-          <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-          </svg>
-        </button>
+          <span className="text-sm font-bold text-[#888] group-hover:text-white transition-colors">
+            X
+          </span>
+        </a>
 
         {/* LinkedIn */}
-        <button
-          type="button"
-          onClick={(e) =>
-            handleShareClick(
-              e,
-              `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`
-            )
-          }
+        <a
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
           title="Share on LinkedIn"
-          className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] text-[#888] hover:bg-[#0077b5]/20 hover:text-[#0077b5] hover:border-[#0077b5]/40 transition-all cursor-pointer"
+          className="w-10 h-10 rounded-full border border-white/[0.08] bg-[#0c0c0c] hover:bg-[#141414] hover:border-[#0a66c2]/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 group"
         >
-          <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.32a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63 1.64 1.64 0 0 0-1.65-1.64z" />
+          <svg
+            className="w-4 h-4 text-[#888] group-hover:text-[#0a66c2] transition-colors"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
           </svg>
-        </button>
+        </a>
 
         {/* WhatsApp */}
-        <button
-          type="button"
-          onClick={(e) =>
-            handleShareClick(
-              e,
-              `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`
-            )
-          }
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(`${title} ${url || getShareUrl()}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
           title="Share on WhatsApp"
-          className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] text-[#888] hover:bg-[#25d366]/20 hover:text-[#25d366] hover:border-[#25d366]/40 transition-all cursor-pointer"
+          className="w-10 h-10 rounded-full border border-white/[0.08] bg-[#0c0c0c] hover:bg-[#141414] hover:border-[#25D366]/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 group"
         >
-          <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.2 0-.44.08-.66.32-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.13.17 1.73 2.65 4.2 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29s-1.47-.73-1.7-.81c-.23-.08-.4-.13-.56.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.07-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43z" />
+          <svg
+            className="w-4 h-4 text-[#888] group-hover:text-[#25D366] transition-colors"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12.031 0C5.385 0 0 5.388 0 12.035c0 2.126.551 4.198 1.603 6.02L.15 23.364l5.441-1.428A11.966 11.966 0 0012.03 24c6.646 0 12.032-5.388 12.032-12.035C24.062 5.388 18.677 0 12.031 0zm3.805 17.202c-.173.493-.996.963-1.42 1.011-.424.048-.936.143-2.996-.713-2.474-1.026-4.053-3.565-4.175-3.731-.122-.166-1.004-1.336-1.004-2.545 0-1.21.624-1.803.844-2.046.22-.243.483-.304.643-.304.16 0 .319.004.458.01.14.006.326-.056.51.396.183.45.626 1.536.682 1.65.056.114.094.246.012.41-.082.164-.124.267-.248.414-.124.148-.261.32-.375.45-.125.143-.255.302-.112.551.143.249.638 1.056 1.365 1.706.94.84 1.737 1.1 1.986 1.218.249.118.396.096.541-.073.146-.169.625-.728.793-.979.168-.25.337-.208.563-.122.226.086 1.433.676 1.677.798.244.122.406.183.466.286.06.103.06.594-.113 1.087z" />
           </svg>
-        </button>
+        </a>
 
         {/* Facebook */}
-        <button
-          type="button"
-          onClick={(e) =>
-            handleShareClick(
-              e,
-              `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
-            )
-          }
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
           title="Share on Facebook"
-          className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] text-[#888] hover:bg-[#1877f2]/20 hover:text-[#1877f2] hover:border-[#1877f2]/40 transition-all cursor-pointer"
+          className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] text-[#888] hover:bg-[#1877f2]/20 hover:text-[#1877f2] hover:border-[#1877f2]/40 transition-all group"
         >
-          <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 fill-current transition-colors" viewBox="0 0 24 24">
             <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
           </svg>
-        </button>
+        </a>
 
         {/* Copy Link Button */}
         <button

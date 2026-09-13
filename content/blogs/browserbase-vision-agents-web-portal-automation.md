@@ -5,7 +5,7 @@ date: "2026-09-02"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how Browserbase and vision-based AI agents are dismantling the last automation frontier—legacy web portals and government systems—with 94% task success rates and 70% cost reductions. A technical blueprint for modern operations."
-coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["Browserbase", "Vision Agents", "Computer Use", "Legacy Automation", "RPA Replacement", "AI Agents"]

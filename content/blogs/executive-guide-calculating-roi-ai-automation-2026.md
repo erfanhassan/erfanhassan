@@ -5,7 +5,7 @@ date: "2026-09-07"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Stop guessing whether AI automation is worth it. This executive playbook breaks down the exact formulas, workflow architectures, and cost models you need to calculate a defensible ROI for AI agents in 2026—before you write a single check."
-coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI ROI", "Automation Metrics", "Agent Economics", "2026 AI Strategy", "Workflow Architecture"]

@@ -8,8 +8,34 @@ import MyAIProjects from "@/components/MyAIProjects";
 import About from "@/components/About";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Erfan Hassan",
+      "url": "https://erfanhassan.sonictch.com",
+      "jobTitle": "Founder & AI Automation Engineer",
+      "description": "Building custom AI agents and workflow automation systems to reduce business overhead.",
+      "sameAs": [
+        "https://www.linkedin.com/in/erfan-hassan",
+        "https://twitter.com/erfanhassan",
+        "https://github.com/erfanhassan"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SonicTch AI Automation Agency",
+      "url": "https://erfanhassan.sonictch.com"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Floating Bottom Dock (replaces top navbar) */}
       <FloatingDock />
 

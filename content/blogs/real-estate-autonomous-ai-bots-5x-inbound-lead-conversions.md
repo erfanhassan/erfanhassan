@@ -5,7 +5,7 @@ date: "2026-08-24"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover the exact architecture, workflow logic, and cost models behind autonomous AI bots that help real estate agencies convert up to 5x more inbound leads—without hiring a single additional agent."
-coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Real Estate Agents", "Lead Conversion Automation", "Autonomous AI Bots", "Real Estate Tech", "Inbound Lead Management"]

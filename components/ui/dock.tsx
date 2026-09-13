@@ -5,19 +5,23 @@ import { motion, Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { LucideIcon } from "lucide-react"
 
+import Link from "next/link"
+
 interface DockProps {
   className?: string
   items: {
     icon: LucideIcon
     label: string
-    onClick?: () => void
+    href?: string
+    onClick?: (e: React.MouseEvent) => void
   }[]
 }
 
 interface DockIconButtonProps {
   icon: LucideIcon
   label: string
-  onClick?: () => void
+  href?: string
+  onClick?: (e: React.MouseEvent) => void
   className?: string
 }
 
@@ -33,21 +37,10 @@ const floatingAnimation: Variants = {
   }
 }
 
-const DockIconButton = React.forwardRef<HTMLButtonElement, DockIconButtonProps>(
-  ({ icon: Icon, label, onClick, className }, ref) => {
-    return (
-      <motion.button
-        ref={ref}
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={onClick}
-        className={cn(
-          "relative group p-3 rounded-lg",
-          "hover:bg-[#222] transition-colors",
-          "pointer-events-auto",
-          className
-        )}
-      >
+const DockIconButton = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, DockIconButtonProps>(
+  ({ icon: Icon, label, href, onClick, className }, ref) => {
+    const content = (
+      <>
         <Icon className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
         <span className={cn(
           "absolute -bottom-10 left-1/2 -translate-x-1/2",
@@ -58,6 +51,45 @@ const DockIconButton = React.forwardRef<HTMLButtonElement, DockIconButtonProps>(
         )}>
           {label}
         </span>
+      </>
+    )
+
+    const sharedClass = cn(
+      "relative group p-3 rounded-lg flex items-center justify-center",
+      "hover:bg-[#222] transition-colors",
+      "pointer-events-auto",
+      className
+    )
+
+    if (href) {
+      return (
+        <motion.div
+          whileHover={{ scale: 1.1, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            href={href}
+            onClick={onClick}
+            aria-label={label}
+            className={sharedClass}
+          >
+            {content}
+          </Link>
+        </motion.div>
+      )
+    }
+
+    return (
+      <motion.button
+        ref={ref as React.Ref<HTMLButtonElement>}
+        whileHover={{ scale: 1.1, y: -2 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={onClick}
+        aria-label={label}
+        className={sharedClass}
+      >
+        {content}
       </motion.button>
     )
   }

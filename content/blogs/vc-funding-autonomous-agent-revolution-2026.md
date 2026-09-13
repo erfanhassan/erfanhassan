@@ -5,7 +5,7 @@ date: "2026-08-28"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Discover how $12.8B in venture capital and Big Tech R&D budgets are reshaping the autonomous agent landscape, and what this means for your business automation strategy in 2026."
-coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["AI Agents", "Venture Capital", "Autonomous Systems", "AI Funding", "Enterprise Automation"]

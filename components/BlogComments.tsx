@@ -18,25 +18,6 @@ interface BlogCommentsProps {
   postSlug: string;
 }
 
-const DEFAULT_COMMENTS: Comment[] = [
-  {
-    id: "seed-1",
-    name: "Tariq Mahmud",
-    avatarColor: "#e8ff47",
-    text: "The cost breakdown and multi-agent workflow architecture are spot on. We were spending hours on manual operations before implementing custom AI agents.",
-    date: "2 days ago",
-    likes: 12,
-  },
-  {
-    id: "seed-2",
-    name: "Sarah Jenkins",
-    avatarColor: "#85b6ff",
-    text: "Great insights on DeepSeek unit economics vs legacy LLMs. Really clean and practical blueprint.",
-    date: "1 day ago",
-    likes: 7,
-  },
-];
-
 const AVATAR_COLORS = ["#e8ff47", "#85b6ff", "#fca5a5", "#c4b5fd", "#6ee7b7", "#f472b6"];
 
 export default function BlogComments({ postSlug }: BlogCommentsProps) {
@@ -54,14 +35,12 @@ export default function BlogComments({ postSlug }: BlogCommentsProps) {
       const saved = localStorage.getItem(storageKey);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed)) {
           setComments(parsed);
-          return;
         }
       }
-      setComments(DEFAULT_COMMENTS);
     } catch {
-      setComments(DEFAULT_COMMENTS);
+      // ignore
     }
   }, [postSlug]);
 

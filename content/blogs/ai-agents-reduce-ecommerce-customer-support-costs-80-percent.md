@@ -5,7 +5,7 @@ date: "2026-09-12"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "A technical and financial deep-dive into how autonomous AI support agents cut e-commerce customer service costs by 80% — with real cost math, workflow architectures, and a 90-day implementation roadmap."
-coverImage: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop"
 track: "automation"
 category: "Business Automation"
 tags: ["AI Agents", "E-Commerce Automation", "Customer Support AI", "Cost Reduction", "LLM Agents"]

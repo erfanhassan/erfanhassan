@@ -5,7 +5,7 @@ date: "2026-08-30"
 author: "Erfan Hassan"
 authorRole: "Founder & Lead AI Automation Architect"
 excerpt: "Voice AI agents have crossed the sub-300ms latency threshold, making them indistinguishable from human agents. This deep-dive reveals the architecture, stack, and cost models powering real-time phone support that cuts operational expenses by 60-80%."
-coverImage: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop"
 track: "ecosystem"
 category: "AI Ecosystem & Tools"
 tags: ["Voice AI", "Real-Time Agents", "LLM Architecture", "Telephony Automation", "Sub-300ms Latency"]
