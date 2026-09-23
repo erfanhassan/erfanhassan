@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { GradientBackground } from "@/components/ui/paper-design-shader-background";
 
@@ -104,11 +105,12 @@ export default function MyAIProjects() {
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="relative z-10 w-[90%] md:w-[85%] lg:w-auto lg:flex-1 max-w-[320px] flex items-center justify-center group/img perspective-1000"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={`/images/${project.id}-app.png`}
                   alt={`${project.title} App Interface`}
-                  className="w-full transition-all duration-700 ease-out drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]"
+                  width={320}
+                  height={640}
+                  className="w-full h-auto transition-all duration-700 ease-out drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]"
                   style={{
                     transform: `perspective(1200px) rotateY(${project.id === "jwala" ? "15deg" : "-15deg"}) rotateX(10deg) rotateZ(${project.id === "jwala" ? "2deg" : "-2deg"})`,
                   }}

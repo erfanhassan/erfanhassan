@@ -9,7 +9,7 @@ const FRAME_HEIGHT_VH = 500;
 
 function getFramePath(index: number): string {
   const padded = String(index).padStart(2, "0");
-  return `/sequence/frame_${padded}_delay-0.062s.png`;
+  return `/sequence/frame_${padded}_delay-0.062s.webp`;
 }
 
 // ─── Cover logic (mirrors CSS object-fit: cover) ─────────────────────────────
@@ -88,31 +88,40 @@ export default function ScrollyCanvas() {
     }
   });
 
-  // ── Preload all images ────────────────────────────────────────────────────
+  // ── Preload images efficiently ────────────────────────────────────────────
   useEffect(() => {
     imagesRef.current = [];
     loadedCountRef.current = 0;
     isReadyRef.current = false;
+    let isActive = true;
 
-    for (let i = 0; i < TOTAL_FRAMES; i++) {
-      const img = new Image();
-      img.src = getFramePath(i);
-      img.onload = () => {
-        loadedCountRef.current++;
-        // Once first frame loads, render it immediately so canvas isn't blank
-        if (loadedCountRef.current === 1) {
-          isReadyRef.current = true;
-          renderFrame(0);
-        }
-        if (loadedCountRef.current === TOTAL_FRAMES) {
-          // Re-render at current frame with full quality
-          renderFrame(currentFrameRef.current);
-        }
-      };
-      imagesRef.current[i] = img;
-    }
+    // Load frame 0 immediately for fast LCP
+    const firstImg = new Image();
+    firstImg.src = getFramePath(0);
+    firstImg.onload = () => {
+      if (!isActive) return;
+      imagesRef.current[0] = firstImg;
+      isReadyRef.current = true;
+      renderFrame(0);
+      
+      // Asynchronously preload the rest after first frame is ready
+      for (let i = 1; i < TOTAL_FRAMES; i++) {
+        const img = new Image();
+        img.src = getFramePath(i);
+        img.onload = () => {
+          if (isActive) {
+            imagesRef.current[i] = img;
+            // If the user already scrolled to this frame, render it now
+            if (currentFrameRef.current === i) {
+              renderFrame(i);
+            }
+          }
+        };
+      }
+    };
 
     return () => {
+      isActive = false;
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [renderFrame]);

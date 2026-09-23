@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 // ─── Actual logo images from public/logos/ ───────────────────────────────────
 // All logos are light-grey on white PNGs. We use CSS filter invert(1) + brightness
 // to flip them to white-on-transparent so they look great on the dark background.
@@ -55,8 +57,7 @@ export default function LogoMarquee() {
             className="flex-shrink-0 flex items-center justify-center"
             title={logo.label}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={logo.src}
               alt={logo.label}
               width={logo.width}
